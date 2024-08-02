@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TViết một chương trình để đếm số từ trong một chuỗi</title>
+</head>
+<body>
+<script>
+    function countWords(str) {
+        // Loại bỏ khoảng trắng thừa ở đầu và cuối chuỗi
+        str = str.trim();
+
+        // Kiểm tra chuỗi có rỗng sau khi loại bỏ khoảng trắng không
+        if (str === "") {
+            return 0;
+        }
+
+        // Tách chuỗi thành các từ dựa trên khoảng trắng
+        let words = str.split(/\s+/);
+
+        // Đếm số từ trong mảng
+        return words.length;
+    }
+
+    let inputString = "Chào mừng bạn đến với thế giới JavaScript!";
+    let wordCount = countWords(inputString);
+
+    document.write( "Số từ trong chuỗi là: " + wordCount);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      function replaceHe(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === "-") {
+            arr[i] = "_";
+          }
+        }
+        return arr;
+      }
+
+      let charArray = ["a", "-", "b", "-", "c", "-"];
+      console.log("Mảng ban đầu:", charArray);
+
+      charArray = replaceHe(charArray);
+      console.log("Mảng sau khi thay thế:", charArray);
+    </script>
+  </body>
+</html>
